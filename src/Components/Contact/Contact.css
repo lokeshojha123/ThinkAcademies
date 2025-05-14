@@ -25,7 +25,7 @@
 .contact-left p {
   font-size: 1rem;
   color: #ccc;
-  line-height: 1.6;
+  line-height: 1;
 }
 
 /* Contact details (email, phone, location) */
@@ -44,7 +44,7 @@
 
 .contact-detail svg {
   font-size: 1.3rem;
-  color: #1e90ff; 
+  color: #1560aa; 
 }
 
 /* Right: Contact form */
@@ -81,12 +81,12 @@
 
 .contact-right input:focus,
 .contact-right textarea:focus {
-  border-color: #1e90ff;
+  border-color: #1560aa;
 }
 
 /* Submit button */
 .contact-submit {
-  background-color: #1e90ff;
+  background-color: #1560aa;
   color: #fff;
   font-weight: 600;
   padding: 0.8rem;

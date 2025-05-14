@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './NavBar.css';
-import logo from '../../assets/logopic.webp';
+// import logo from '../../assets/logopic.webp';
 import underline from '../../assets/mainpic.jpeg';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
@@ -15,6 +15,7 @@ const NavBar = () => {
   return (
     <div className="navbar">
       {/* <img src={logo} alt="" /> */}
+      <h1>Think academies</h1>
 
       <div className="hamburger" onClick={toggleMenu}>
         <div className="line"></div>
