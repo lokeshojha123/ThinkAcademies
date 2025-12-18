@@ -1,117 +1,114 @@
+/*-----------------OUR WORK SECTION---------------*/
+
 .ourwork {
-    display: flex; 
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 80px;
-    margin: 80px 170px;  
+  padding: 6rem 2rem;
+  background: radial-gradient(circle at top, #0b0b0b, #000);
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
 }
 
-.ourwork-title {
-    position: relative;
-}
+/*-------------------TITLE-------------------- */
 
 .ourwork-title h1 {
-    padding: 0px 30px;
-    font-size: 80px;
-    font-weight: 600;
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 3rem;
+  background: linear-gradient(270deg, #1e90ff, #7f5cff);
+ -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.ourwork-title img {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
-}
+/*--------------------WORK GRID------------------*/
 
 .our-work-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr; 
-    gap: 40px;  
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
 }
 
+/* Work images */
 .our-work-container img {
-    box-sizing: border-box;
-    width: 420px;
-    height: 300px;
-    transition: 0.3s;
-    cursor: pointer;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
+/* Hover effect */
 .our-work-container img:hover {
-    transform: scale(1.10);
-    border: 2px solid white;
-    border-radius: 10px;
-    transition: 0.3s;
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 30px 60px rgba(30,144,255,0.35);
 }
+
+/*----------------SHOW MORE BUTTON-----------------*/
 
 .showmore {
-    display: flex;
-    gap: 15px;
-    border-radius: 50px;
-    border: 2px solid white;
-    padding: 30px 60px;
-    font-size: 20px;
-    font-weight: 500;
-    transition: 0.06s;
-    cursor: pointer;
-    align-items: center;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.9rem 2rem;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.3);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.showmore svg {
+  transition: transform 0.3s ease;
 }
 
 .showmore:hover {
-    gap: 30px;
-    transition: 0.6s;
+  background: linear-gradient(270deg, #1e90ff, #7f5cff);
+  border-color: transparent;
+  box-shadow: 0 15px 35px rgba(127,92,255,0.6);
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) { /* Tablet View */
-    .ourwork {
-        margin: 60px 50px;
-        gap: 60px;
-    }
-
-    .ourwork-title h1 {
-        font-size: 60px;
-    }
-
-    .our-work-container {
-        grid-template-columns: 1fr 1fr;
-        gap: 30px;
-    }
-
-    .our-work-container img {
-        width: 350px;
-        height: 250px;
-    }
-
-    .showmore {
-        padding: 20px 50px;
-        font-size: 18px;
-    }
+.showmore:hover svg {
+  transform: translateX(6px);
 }
 
-@media (max-width: 768px) { /* Mobile View */
-    .ourwork {
-        margin: 40px 20px;
-        gap: 40px;
-    }
+/*---------------RESPONSIVE------------------*/
 
-    .ourwork-title h1 {
-        font-size: 40px;
-    }
+@media (max-width: 1024px) {
+  .ourwork-title h1 {
+    font-size: 2.6rem;
+  }
 
-    .our-work-container {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
+  .our-work-container img {
+    height: 200px;
+  }
+}
 
-    .our-work-container img {
-        width: 100%;
-        height: auto;
-    }
+@media (max-width: 768px) {
+  .ourwork {
+    padding: 4rem 1.5rem;
+  }
 
-    .showmore {
-        padding: 15px 40px;
-        font-size: 16px;
-    }
+  .ourwork-title h1 {
+    font-size: 2.2rem;
+  }
+
+  .our-work-container {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .our-work-container img {
+    height: 180px;
+  }
+
+  .showmore {
+    width: 100%;
+    justify-content: center;
+  }
 }
